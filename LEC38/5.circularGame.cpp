@@ -1,0 +1,13 @@
+#include<iostream>
+
+int game(int n, int k){
+  if(n == 1)
+    return 0;
+
+  return (game(n-1,k)+k)%n;
+}
+
+int findTheWinner(int n, int k) {
+  return game(n,k)+1;
+}
+
